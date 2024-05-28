@@ -1,0 +1,123 @@
+html,
+body {
+  background: var(--default);
+}
+
+:root {
+  --default: #861313;
+  --empty: #a3a3a7;
+  --absent: #3a3a3c;
+  --exist: #b59f3b;
+  --right: #538d4e;
+}
+
+#wordle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    overflow: hidden
+}
+
+.board {
+    display: grid;
+    grid-template-rows: repeat(6, auto);
+    grid-template-columns: repeat(5, auto);
+}
+
+.tile {
+    width: 52px;
+    height: 52px;
+    border: 2px solid var(--empty);
+    margin: 4px;
+    color: white;
+    text-transform: uppercase;
+    display: inline-flex;
+    place-items: center;
+    justify-content: center;
+    font-family: Helvetica;
+    font-size: 2.4rem;
+}
+
+.absent {
+    background: var(--absent);
+}
+  
+.exist {
+    background: var(--exist);
+}
+  
+.right {
+    background: var(--right);
+}
+  
+.animatedFlip {
+    animation: flip 0.5s ease;
+}
+
+@keyframes flip {
+    0% {
+      transform: scaleY(1);
+    }
+    50% {
+      transform: scaleY(0);
+    }
+    100% {
+      transform: scaleY(1);
+    }
+}
+
+.keyboard{
+    margin: 0 8px;
+    height: 200px;
+}
+
+.keyboard-row {
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.key {
+    width: 43px;
+    height: 58px;
+    margin: 1px;
+    border: 1px solid lightgray;
+
+    /* Text */
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.enterKey {
+    width: 65px;
+    height: 58px;
+    margin: 1px;
+    border: 1px solid lightgray;
+    justify-content: center;
+    align-items: center;
+
+    /* Text */
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: white;
+    text-align: center;
+    font-family: 'nyt-karnakcondensed';
+    font-size: 3rem;
+    letter-spacing: .01em;
+    margin-bottom: 0;
+    position: relative;
+}
