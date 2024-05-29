@@ -166,7 +166,7 @@ function submitGuess(){
     }
   
     const isWinner = state.secret === guess;
-    const isGameOver = state.guessRow === 5;
+    const isGameOver = guessRow === 5;
   
     setTimeout(() => {
       if (isWinner) {
